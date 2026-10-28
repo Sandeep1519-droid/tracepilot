@@ -1,0 +1,28 @@
+# Dependencies and builds
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Secrets and local runtime data
+.env
+.env.*
+!.env.example
+data/
+*.sqlite
+*.sqlite-*
+*.db
+*.log
+playwright-report/
+test-results/
+.DS_Store
+
+# Personal/unrelated workspace outputs
+outputs/
+infergent-application-sent.png
+
+# Local external-site evidence and development session records
+docs/amazon/
+docs/*-verification.json
+docs/*-summary.json
+docs/AI-BENCHMARK-PROGRESS.md

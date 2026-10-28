@@ -1,0 +1,56 @@
+{
+  "name": "tracepilot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,worker,web \"tsx watch src/server/index.ts\" \"tsx watch src/server/worker.ts\" \"vite --host 127.0.0.1\"",
+    "start": "concurrently -k -n api,worker \"tsx src/server/index.ts\" \"tsx src/server/worker.ts\"",
+    "server": "tsx src/server/index.ts",
+    "worker": "tsx src/server/worker.ts",
+    "web": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:integration": "tsx scripts/integration.ts",
+    "eval": "tsx scripts/evaluate.ts",
+    "eval:ai": "tsx scripts/evaluate.ts --ai",
+    "test:lifecycle": "tsx scripts/lifecycle.ts",
+    "replay": "tsx scripts/replay.ts",
+    "smoke:ai": "tsx scripts/model-smoke.ts",
+    "test:evaluations": "tsx scripts/test-evaluation-ui.ts",
+    "test:external": "tsx scripts/test-external.ts && tsx scripts/test-external-ui.ts",
+    "smoke:amazon": "tsx scripts/amazon-smoke.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.56.0",
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.9.10",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "description": "AI-assisted browser testing with local LLMs, Playwright evidence, failure replay, and regression test generation.",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sandeep1519-droid/tracepilot.git"
+  }
+}
