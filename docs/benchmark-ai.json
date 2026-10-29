@@ -1,0 +1,338 @@
+{
+  "at": "2026-10-25T10:20:23.770Z",
+  "mode": "ai",
+  "label": "Model-backed benchmark",
+  "provider": "ollama",
+  "model": "qwen3:4b",
+  "metrics": {
+    "bugDetectionPrecision": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1
+    },
+    "bugDetectionRecall": {
+      "numerator": 3,
+      "denominator": 5,
+      "rate": 0.6
+    },
+    "falseReportsOnCorrect": {
+      "numerator": 0,
+      "denominator": 6,
+      "rate": 0
+    },
+    "taskCompletion": {
+      "numerator": 6,
+      "denominator": 11,
+      "rate": 0.5454545454545454
+    },
+    "agentFailure": {
+      "numerator": 6,
+      "denominator": 13,
+      "rate": 0.46153846153846156
+    },
+    "inconclusive": {
+      "numerator": 1,
+      "denominator": 13,
+      "rate": 0.07692307692307693
+    },
+    "failureReproduction": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1
+    },
+    "regressionValidation": {
+      "numerator": 6,
+      "denominator": 6,
+      "rate": 1
+    },
+    "verdictAccuracy": {
+      "numerator": 8,
+      "denominator": 13,
+      "rate": 0.6153846153846154
+    },
+    "meanRuntimeMs": 42800,
+    "modelInputTokens": 68333,
+    "modelOutputTokens": 2249,
+    "estimatedCost": null
+  },
+  "records": [
+    {
+      "id": "coupon-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "970a2ce8-f068-4dff-94e9-2106b9588672",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 71800,
+      "usage": {
+        "inputTokens": 7576,
+        "outputTokens": 250,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "coupon-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "4409390c-a58e-40aa-ba5b-80871f115305",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 63178,
+      "usage": {
+        "inputTokens": 7578,
+        "outputTokens": 250,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "quantity-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "30277409-8850-4cae-a1f0-0bf41a541477",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 60906,
+      "usage": {
+        "inputTokens": 7478,
+        "outputTokens": 232,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "quantity-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "7ef1ef99-36a1-46ef-be89-c96075d735fd",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 39362,
+      "usage": {
+        "inputTokens": 7471,
+        "outputTokens": 232,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "removal-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "93300a91-f375-4614-86f2-460900e620ab",
+      "correct": false,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "complete": false,
+      "runtimeMs": 13646,
+      "usage": {
+        "inputTokens": 3704,
+        "outputTokens": 72,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "removal-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "d4fda026-c531-4418-bf23-91c1d76b0eba",
+      "correct": false,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "complete": false,
+      "runtimeMs": 13147,
+      "usage": {
+        "inputTokens": 3704,
+        "outputTokens": 72,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "checkout-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "a770a5e8-e9ef-47ce-a736-203d7767a76a",
+      "correct": false,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "complete": false,
+      "runtimeMs": 32670,
+      "usage": {
+        "inputTokens": 3580,
+        "outputTokens": 140,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "checkout-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "acb0e0f9-8407-4d99-a166-9e78e4486515",
+      "correct": false,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "complete": false,
+      "runtimeMs": 81001,
+      "usage": {
+        "inputTokens": 3580,
+        "outputTokens": 140,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "missing-requirement",
+      "split": "development",
+      "expectedVerdict": "inconclusive",
+      "actualVerdict": "inconclusive",
+      "runId": "544313af-9b64-48b5-a314-52aef58fc96a",
+      "correct": true,
+      "explanation": "An explicit supported verification contract is required. Select a preset and preserve its expected behavior. Custom expectations are retained, but are not automatically reinterpreted.",
+      "complete": false,
+      "exportStatus": "unsupported",
+      "runtimeMs": 14114
+    },
+    {
+      "id": "blocked-redirect",
+      "split": "development",
+      "expectedVerdict": "agent_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "0a40ecc8-2b15-461d-a852-c667f699d7ff",
+      "correct": true,
+      "explanation": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://127.0.0.1:4311/outbound\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4311/outbound\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "complete": false,
+      "runtimeMs": 31300
+    },
+    {
+      "id": "login-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "652049cb-b65d-46f5-b2fe-fadbca2ae19c",
+      "correct": false,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "complete": false,
+      "runtimeMs": 39151,
+      "usage": {
+        "inputTokens": 7154,
+        "outputTokens": 329,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "alternate-coupon",
+      "split": "held-out",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "3f115342-7ff1-4544-be42-a9b21cc67f4a",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 57657,
+      "usage": {
+        "inputTokens": 10167,
+        "outputTokens": 335,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "alternate-quantity",
+      "split": "held-out",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "1b1b8845-95c3-4e38-95dd-35aae4e6b14d",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 38468,
+      "usage": {
+        "inputTokens": 6341,
+        "outputTokens": 197,
+        "estimatedCost": null
+      }
+    }
+  ],
+  "handwritten": {
+    "matched": 8,
+    "total": 8,
+    "records": [
+      {
+        "scenario": "expired",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 483
+      },
+      {
+        "scenario": "expired",
+        "variant": "expired-coupon",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1144
+      },
+      {
+        "scenario": "quantity",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 212
+      },
+      {
+        "scenario": "quantity",
+        "variant": "stale-quantity",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1096
+      },
+      {
+        "scenario": "removal",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 171
+      },
+      {
+        "scenario": "removal",
+        "variant": "sticky-discount",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1149
+      },
+      {
+        "scenario": "checkout",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 151
+      },
+      {
+        "scenario": "checkout",
+        "variant": "missing-required",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1175
+      }
+    ]
+  }
+}

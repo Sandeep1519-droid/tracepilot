@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-10-25T10:02:05.498Z",
+  "nodeVersion": "v20.20.0",
+  "provider": "ollama",
+  "model": "qwen3:4b",
+  "modelDigest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "options": {
+    "temperature": 0,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "think": false
+  },
+  "sourceSha256": {
+    "src/server/provider.ts": "3386443c6b8527b295989ea4033db57befbf37d57652c7ff69085d723d497ff4",
+    "src/server/runner.ts": "0c644adf52874862295fa5cc5b75d3c05b399cff6cd22570f27817e7be9b89f2",
+    "src/server/browser.ts": "89e58d1af8cd888906e37b7a45e06d83e1eeb82a9791e1564e9c7ea8b349ecff",
+    "src/server/preconditions.ts": "2b463ba0b233c9cf65eec87afb1c7b475e32eba2f8858673a419454359c137cb",
+    "src/server/verification.ts": "f1c988d7d4620df3e06965eea723af11a2d394d5539b94f61df4ff980cd73d76",
+    "src/shared/domain.ts": "628fe927fb7b5f51943281369ad1b6c8d497e52104da13366e36128df48ac121",
+    "tests/benchmark-cases.json": "0a5d34d9ac59531b9340ad2bcb9d365e1186b3a855065fecf2eb94b760625562"
+  },
+  "measurementPolicy": "One frozen 13-case measurement. Agent prompts and case definitions are unchanged during execution; UI/reporting work is independent."
+}

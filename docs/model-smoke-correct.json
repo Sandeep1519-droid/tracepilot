@@ -1,0 +1,82 @@
+{
+  "at": "2026-10-25T06:28:44.319Z",
+  "mode": "ai",
+  "provider": "ollama",
+  "model": "qwen3:4b",
+  "runId": "10b111f3-3a62-443f-b787-5a90b6ab3315",
+  "lifecycle": "completed",
+  "verdict": "passed",
+  "explanation": "Every required deterministic check completed and passed.",
+  "exportStatus": "verified",
+  "usage": {
+    "inputTokens": 7576,
+    "outputTokens": 250,
+    "estimatedCost": null
+  },
+  "actions": [
+    {
+      "action": {
+        "type": "navigate",
+        "url": "http://127.0.0.1:4311"
+      },
+      "result": "Completed"
+    },
+    {
+      "action": {
+        "type": "click_element",
+        "elementId": "e2",
+        "observationId": 1
+      },
+      "result": "Completed"
+    },
+    {
+      "action": {
+        "type": "fill_field",
+        "elementId": "e4",
+        "observationId": 2,
+        "value": "EXPIRED20"
+      },
+      "result": "Completed"
+    },
+    {
+      "action": {
+        "type": "press_key",
+        "elementId": "e5",
+        "observationId": 3,
+        "key": "Tab"
+      },
+      "result": "Completed"
+    },
+    {
+      "action": {
+        "type": "check_condition",
+        "checkId": "initial-total"
+      },
+      "result": "Assertion passed"
+    },
+    {
+      "action": {
+        "type": "press_key",
+        "elementId": "e5",
+        "observationId": 5,
+        "key": "Enter"
+      },
+      "result": "Completed"
+    },
+    {
+      "action": {
+        "type": "check_condition",
+        "checkId": "coupon-rejected"
+      },
+      "result": "Assertion passed"
+    },
+    {
+      "action": {
+        "type": "check_condition",
+        "checkId": "total-unchanged"
+      },
+      "result": "Assertion passed"
+    }
+  ],
+  "errors": []
+}

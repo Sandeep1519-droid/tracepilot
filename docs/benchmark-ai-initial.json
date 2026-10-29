@@ -1,0 +1,331 @@
+{
+  "at": "2026-10-25T10:05:52.372Z",
+  "mode": "ai",
+  "label": "Model-backed benchmark",
+  "provider": "ollama",
+  "model": "qwen3:4b",
+  "metrics": {
+    "bugDetectionPrecision": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1
+    },
+    "bugDetectionRecall": {
+      "numerator": 3,
+      "denominator": 5,
+      "rate": 0.6
+    },
+    "falseReportsOnCorrect": {
+      "numerator": 0,
+      "denominator": 6,
+      "rate": 0
+    },
+    "taskCompletion": {
+      "numerator": 6,
+      "denominator": 11,
+      "rate": 0.5454545454545454
+    },
+    "agentFailure": {
+      "numerator": 5,
+      "denominator": 13,
+      "rate": 0.38461538461538464
+    },
+    "inconclusive": {
+      "numerator": 1,
+      "denominator": 13,
+      "rate": 0.07692307692307693
+    },
+    "failureReproduction": {
+      "numerator": 2,
+      "denominator": 3,
+      "rate": 0.6666666666666666
+    },
+    "regressionValidation": {
+      "numerator": 6,
+      "denominator": 7,
+      "rate": 0.8571428571428571
+    },
+    "verdictAccuracy": {
+      "numerator": 7,
+      "denominator": 13,
+      "rate": 0.5384615384615384
+    },
+    "meanRuntimeMs": 39724.38461538462,
+    "modelInputTokens": 76820,
+    "modelOutputTokens": 2531,
+    "estimatedCost": null
+  },
+  "records": [
+    {
+      "id": "coupon-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "78ea1ea1-9dfc-4bd7-987f-4e762884351b",
+      "correct": true,
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 68912,
+      "usage": {
+        "inputTokens": 7576,
+        "outputTokens": 250,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "coupon-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "7402d15a-dbec-4b3c-a3ee-b21b58979b65",
+      "correct": true,
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 46079,
+      "usage": {
+        "inputTokens": 7578,
+        "outputTokens": 250,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "quantity-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "c98128f3-427f-4596-81fb-abd92d041a49",
+      "correct": true,
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 41164,
+      "usage": {
+        "inputTokens": 7478,
+        "outputTokens": 232,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "quantity-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "1746e2ad-d5f1-4165-9c54-4011cfd17c73",
+      "correct": true,
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 36777,
+      "usage": {
+        "inputTokens": 7471,
+        "outputTokens": 232,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "removal-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "7d9a3d93-e0b3-40cd-8e7a-dd6dd925fe6e",
+      "correct": false,
+      "complete": false,
+      "runtimeMs": 13244,
+      "usage": {
+        "inputTokens": 3704,
+        "outputTokens": 72,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "removal-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "3941d370-6fde-4bac-860f-3ef9e93d33e1",
+      "correct": false,
+      "complete": false,
+      "runtimeMs": 15229,
+      "usage": {
+        "inputTokens": 3704,
+        "outputTokens": 72,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "checkout-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "8cd82601-96ca-4f54-be77-5b429d5b1306",
+      "correct": false,
+      "complete": false,
+      "runtimeMs": 23324,
+      "usage": {
+        "inputTokens": 3580,
+        "outputTokens": 140,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "checkout-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "a9ff23c6-05e1-4026-9684-8b1bb9f74e7d",
+      "correct": false,
+      "complete": false,
+      "runtimeMs": 44732,
+      "usage": {
+        "inputTokens": 3580,
+        "outputTokens": 140,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "missing-requirement",
+      "split": "development",
+      "expectedVerdict": "inconclusive",
+      "actualVerdict": "inconclusive",
+      "runId": "6c02f880-602f-45ae-b3fc-d334f202ec11",
+      "correct": true,
+      "complete": false,
+      "exportStatus": "unsupported",
+      "runtimeMs": 18010
+    },
+    {
+      "id": "missing-control",
+      "split": "development",
+      "expectedVerdict": "agent_failure",
+      "actualVerdict": "passed",
+      "runId": "921bdc78-2bda-4ed8-86d3-e242b7c570b8",
+      "correct": false,
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 64919,
+      "usage": {
+        "inputTokens": 8487,
+        "outputTokens": 282,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "login-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "agent_failure",
+      "runId": "463824ed-62ea-40cf-9774-d48dcf28d0e5",
+      "correct": false,
+      "complete": false,
+      "runtimeMs": 39972,
+      "usage": {
+        "inputTokens": 7154,
+        "outputTokens": 329,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "alternate-coupon",
+      "split": "held-out",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "592cd0a9-3c9b-4153-8986-f4fbe7a83abf",
+      "correct": true,
+      "complete": true,
+      "reproduction": "incomplete",
+      "exportStatus": "unverified",
+      "runtimeMs": 62317,
+      "usage": {
+        "inputTokens": 10167,
+        "outputTokens": 335,
+        "estimatedCost": null
+      }
+    },
+    {
+      "id": "alternate-quantity",
+      "split": "held-out",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "9036c68d-2811-4f6c-bdb0-2daf72167624",
+      "correct": true,
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 41738,
+      "usage": {
+        "inputTokens": 6341,
+        "outputTokens": 197,
+        "estimatedCost": null
+      }
+    }
+  ],
+  "handwritten": {
+    "matched": 8,
+    "total": 8,
+    "records": [
+      {
+        "scenario": "expired",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 439
+      },
+      {
+        "scenario": "expired",
+        "variant": "expired-coupon",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1140
+      },
+      {
+        "scenario": "quantity",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 214
+      },
+      {
+        "scenario": "quantity",
+        "variant": "stale-quantity",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1137
+      },
+      {
+        "scenario": "removal",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 158
+      },
+      {
+        "scenario": "removal",
+        "variant": "sticky-discount",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1141
+      },
+      {
+        "scenario": "checkout",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 375
+      },
+      {
+        "scenario": "checkout",
+        "variant": "missing-required",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1150
+      }
+    ]
+  }
+}

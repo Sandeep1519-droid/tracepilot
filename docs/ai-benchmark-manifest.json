@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-10-25T10:10:47.501Z",
+  "nodeVersion": "v20.20.0",
+  "provider": "ollama",
+  "model": "qwen3:4b",
+  "modelDigest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+  "options": {
+    "temperature": 0,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "think": false
+  },
+  "sourceSha256": {
+    "src/server/provider.ts": "3386443c6b8527b295989ea4033db57befbf37d57652c7ff69085d723d497ff4",
+    "src/server/runner.ts": "e95f7d905da00fe05310a2c2b648131d909d28c3a713798d90814b482dbfcb03",
+    "src/server/browser.ts": "e594fc7b6be6b5a47ba1d84df0bd8eb7813296a39bb70c5fc706aa78545d0235",
+    "src/server/preconditions.ts": "2b463ba0b233c9cf65eec87afb1c7b475e32eba2f8858673a419454359c137cb",
+    "src/server/verification.ts": "f1c988d7d4620df3e06965eea723af11a2d394d5539b94f61df4ff980cd73d76",
+    "src/shared/domain.ts": "147480451018a9545f70dcd5924b9f138b74f65fa11ba674e10e4bbd09502f8c",
+    "tests/benchmark-cases.json": "61e77b4449c873e71382da4358bab2f558ecfc5bfe9105acffe98fbfba74b2db"
+  },
+  "measurementPolicy": "Full rerun after execution-provenance/replay fix and deterministic blocked-redirect fixture correction. Model prompt, options and held-out wording cases are unchanged.",
+  "promptUnchanged": true,
+  "initialMeasurement": "benchmark-ai-initial.json",
+  "postMeasurementFixes": [
+    {
+      "path": "src/server/store.ts",
+      "reason": "Acquire immediate writer reservations to prevent SQLITE_BUSY_SNAPSHOT during concurrent heartbeat/run admission.",
+      "sourceSha256": "41e0b36ca0c79734ed43f3a19e43e45a94bab2fde54c3313da320d74d924ecfb",
+      "verifiedBy": "tests/concurrency.test.ts: 500 create/cancel cycles and 1000 concurrent heartbeat writes"
+    }
+  ]
+}

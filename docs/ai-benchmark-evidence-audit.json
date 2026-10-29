@@ -1,0 +1,426 @@
+{
+  "at": "2026-10-25T10:22:16.768291+00:00",
+  "records": [
+    {
+      "id": "coupon-correct",
+      "runId": "970a2ce8-f068-4dff-94e9-2106b9588672",
+      "lifecycle": "completed",
+      "verdict": "passed",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": "verified",
+      "explanation": "Every required deterministic check completed and passed.",
+      "finalActions": [
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "press_key",
+          "target": "Apply",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        }
+      ]
+    },
+    {
+      "id": "coupon-defect",
+      "runId": "4409390c-a58e-40aa-ba5b-80871f115305",
+      "lifecycle": "completed",
+      "verdict": "product_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "finalActions": [
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "press_key",
+          "target": "Apply",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion failed"
+        }
+      ]
+    },
+    {
+      "id": "quantity-correct",
+      "runId": "30277409-8850-4cae-a1f0-0bf41a541477",
+      "lifecycle": "completed",
+      "verdict": "passed",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": "verified",
+      "explanation": "Every required deterministic check completed and passed.",
+      "finalActions": [
+        {
+          "type": "press_key",
+          "target": "Quantity",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        }
+      ]
+    },
+    {
+      "id": "quantity-defect",
+      "runId": "7ef1ef99-36a1-46ef-be89-c96075d735fd",
+      "lifecycle": "completed",
+      "verdict": "product_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "finalActions": [
+        {
+          "type": "press_key",
+          "target": "Quantity",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion failed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion failed"
+        }
+      ]
+    },
+    {
+      "id": "removal-correct",
+      "runId": "93300a91-f375-4614-86f2-460900e620ab",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "removal-defect",
+      "runId": "d4fda026-c531-4418-bf23-91c1d76b0eba",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        },
+        {
+          "type": "observe_page",
+          "target": "observe_page",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "checkout-correct",
+      "runId": "a770a5e8-e9ef-47ce-a736-203d7767a76a",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "checkout-defect",
+      "runId": "acb0e0f9-8407-4d99-a166-9e78e4486515",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        },
+        {
+          "type": "click_element",
+          "target": "Shop",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "missing-requirement",
+      "runId": "544313af-9b64-48b5-a314-52aef58fc96a",
+      "lifecycle": "completed",
+      "verdict": "inconclusive",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": "unsupported",
+      "explanation": "An explicit supported verification contract is required. Select a preset and preserve its expected behavior. Custom expectations are retained, but are not automatically reinterpreted.",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "blocked-redirect",
+      "runId": "0a40ecc8-2b15-461d-a852-c667f699d7ff",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://127.0.0.1:4311/outbound\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4311/outbound\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "finalActions": [
+        {
+          "type": "navigate",
+          "target": "navigate",
+          "result": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://127.0.0.1:4311/outbound\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4311/outbound\", waiting until \"domcontentloaded\"\u001b[22m\n"
+        }
+      ]
+    },
+    {
+      "id": "login-correct",
+      "runId": "652049cb-b65d-46f5-b2fe-fadbca2ae19c",
+      "lifecycle": "completed",
+      "verdict": "agent_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": null,
+      "explanation": "Agent made no progress: repeated the same action.",
+      "finalActions": [
+        {
+          "type": "fill_field",
+          "target": "Email",
+          "result": "Completed"
+        },
+        {
+          "type": "press_key",
+          "target": "Email",
+          "result": "Completed"
+        },
+        {
+          "type": "press_key",
+          "target": "Email",
+          "result": "Completed"
+        },
+        {
+          "type": "press_key",
+          "target": "Email",
+          "result": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "alternate-coupon",
+      "runId": "3f115342-7ff1-4544-be42-a9b21cc67f4a",
+      "lifecycle": "completed",
+      "verdict": "product_failure",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [
+        "34a734d1-7aaa-4de0-a381-be30bd0cae5d"
+      ],
+      "replayOmissions": [
+        {
+          "at": "2026-10-25T10:19:27.427Z",
+          "attempt": 2,
+          "kind": "replay-omission",
+          "message": "Original event 34a734d1-7aaa-4de0-a381-be30bd0cae5d was rejected before execution and is omitted from replay; its record is preserved."
+        }
+      ],
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "finalActions": [
+        {
+          "type": "press_key",
+          "target": "Use code",
+          "result": "Completed"
+        },
+        {
+          "type": "press_key",
+          "target": "Use code",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion failed"
+        }
+      ]
+    },
+    {
+      "id": "alternate-quantity",
+      "runId": "1b1b8845-95c3-4e38-95dd-35aae4e6b14d",
+      "lifecycle": "completed",
+      "verdict": "passed",
+      "checksPreserveExpectation": true,
+      "rejectedActions": [],
+      "replayOmissions": [],
+      "reproduction": null,
+      "exportStatus": "verified",
+      "explanation": "Every required deterministic check completed and passed.",
+      "finalActions": [
+        {
+          "type": "press_key",
+          "target": "Quantity",
+          "result": "Completed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        },
+        {
+          "type": "check_condition",
+          "target": "check_condition",
+          "result": "Assertion passed"
+        }
+      ]
+    }
+  ]
+}

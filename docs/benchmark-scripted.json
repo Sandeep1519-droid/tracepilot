@@ -1,0 +1,290 @@
+{
+  "at": "2026-10-25T10:26:06.439Z",
+  "mode": "scripted",
+  "label": "Scripted infrastructure checks — not autonomous AI scores",
+  "provider": null,
+  "model": null,
+  "metrics": {
+    "bugDetectionPrecision": {
+      "numerator": 5,
+      "denominator": 5,
+      "rate": 1
+    },
+    "bugDetectionRecall": {
+      "numerator": 5,
+      "denominator": 5,
+      "rate": 1
+    },
+    "falseReportsOnCorrect": {
+      "numerator": 0,
+      "denominator": 6,
+      "rate": 0
+    },
+    "taskCompletion": {
+      "numerator": 11,
+      "denominator": 11,
+      "rate": 1
+    },
+    "agentFailure": {
+      "numerator": 1,
+      "denominator": 13,
+      "rate": 0.07692307692307693
+    },
+    "inconclusive": {
+      "numerator": 1,
+      "denominator": 13,
+      "rate": 0.07692307692307693
+    },
+    "failureReproduction": {
+      "numerator": 5,
+      "denominator": 5,
+      "rate": 1
+    },
+    "regressionValidation": {
+      "numerator": 10,
+      "denominator": 11,
+      "rate": 0.9090909090909091
+    },
+    "verdictAccuracy": {
+      "numerator": 13,
+      "denominator": 13,
+      "rate": 1
+    },
+    "meanRuntimeMs": 3216.153846153846,
+    "modelInputTokens": 0,
+    "modelOutputTokens": 0,
+    "estimatedCost": null
+  },
+  "records": [
+    {
+      "id": "coupon-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "fe53576e-c441-44ba-af55-6d5b0671c83f",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 4589
+    },
+    {
+      "id": "coupon-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "8ef62c85-6fcb-4cba-bb93-16772ae63491",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 4047
+    },
+    {
+      "id": "quantity-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "47eaece2-f530-402d-8abe-ddcaadca2a6f",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 3293
+    },
+    {
+      "id": "quantity-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "c86b0f05-820e-4ecd-8b96-74d690acf967",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 3797
+    },
+    {
+      "id": "removal-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "755fb3f9-65f6-41e0-8089-d2d697e381be",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 3796
+    },
+    {
+      "id": "removal-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "1353a2b6-b8d2-43e5-952d-3566b7f9c149",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 4051
+    },
+    {
+      "id": "checkout-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "2470d9b9-81b9-4bcf-9956-2039832b0655",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 4310
+    },
+    {
+      "id": "checkout-defect",
+      "split": "development",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "9e301694-c7ef-401c-85e5-edeef62caa28",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 5065
+    },
+    {
+      "id": "missing-requirement",
+      "split": "development",
+      "expectedVerdict": "inconclusive",
+      "actualVerdict": "inconclusive",
+      "runId": "6f4264fb-d0a6-4500-85b6-d8fae5b1fac4",
+      "correct": true,
+      "explanation": "An explicit supported verification contract is required. Select a preset and preserve its expected behavior. Custom expectations are retained, but are not automatically reinterpreted.",
+      "complete": false,
+      "exportStatus": "unsupported",
+      "runtimeMs": 508
+    },
+    {
+      "id": "blocked-redirect",
+      "split": "development",
+      "expectedVerdict": "agent_failure",
+      "actualVerdict": "agent_failure",
+      "runId": "b173f92c-50f6-4551-a08e-46a213c5c967",
+      "correct": true,
+      "explanation": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://127.0.0.1:4311/outbound\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4311/outbound\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "complete": false,
+      "runtimeMs": 507
+    },
+    {
+      "id": "login-correct",
+      "split": "development",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "35e4b556-dbe4-458e-bfed-31f0b443109e",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "unverified",
+      "runtimeMs": 506
+    },
+    {
+      "id": "alternate-coupon",
+      "split": "held-out",
+      "expectedVerdict": "product_failure",
+      "actualVerdict": "product_failure",
+      "runId": "653ff527-55e3-4eb1-a2ef-9bca54305a85",
+      "correct": true,
+      "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+      "complete": true,
+      "reproduction": "confirmed",
+      "exportStatus": "verified",
+      "runtimeMs": 4056
+    },
+    {
+      "id": "alternate-quantity",
+      "split": "held-out",
+      "expectedVerdict": "passed",
+      "actualVerdict": "passed",
+      "runId": "130b4f22-f0a2-4214-b564-c03200214d06",
+      "correct": true,
+      "explanation": "Every required deterministic check completed and passed.",
+      "complete": true,
+      "exportStatus": "verified",
+      "runtimeMs": 3285
+    }
+  ],
+  "handwritten": {
+    "matched": 8,
+    "total": 8,
+    "records": [
+      {
+        "scenario": "expired",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 156
+      },
+      {
+        "scenario": "expired",
+        "variant": "expired-coupon",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1127
+      },
+      {
+        "scenario": "quantity",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 109
+      },
+      {
+        "scenario": "quantity",
+        "variant": "stale-quantity",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1098
+      },
+      {
+        "scenario": "removal",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 162
+      },
+      {
+        "scenario": "removal",
+        "variant": "sticky-discount",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1146
+      },
+      {
+        "scenario": "checkout",
+        "variant": "correct",
+        "detectedFailure": false,
+        "expectedFailure": false,
+        "matched": true,
+        "runtimeMs": 171
+      },
+      {
+        "scenario": "checkout",
+        "variant": "missing-required",
+        "detectedFailure": true,
+        "expectedFailure": true,
+        "matched": true,
+        "runtimeMs": 1150
+      }
+    ]
+  }
+}
