@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:lifecycle
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Start local application
+        run: |
+          npm run dev > /tmp/tracepilot-dev.log 2>&1 &
+          echo $! > /tmp/tracepilot-dev.pid
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:4310/api/settings | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>{try{process.exit(JSON.parse(s).workerOnline?0:1)}catch{process.exit(1)}})' && curl --fail --silent http://127.0.0.1:5173/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/tracepilot-dev.log
+          exit 1
+      - run: npm run test:integration
+      - run: npm run test:external
+      - name: Stop local application
+        if: always()
+        run: |
+          if [ -f /tmp/tracepilot-dev.pid ]; then
+            kill $(cat /tmp/tracepilot-dev.pid) || true
+          fi
