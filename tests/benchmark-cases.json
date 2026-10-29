@@ -1,0 +1,97 @@
+[
+  {
+    "id": "coupon-correct",
+    "scenario": "expired",
+    "variant": "correct",
+    "expectedVerdict": "passed",
+    "split": "development"
+  },
+  {
+    "id": "coupon-defect",
+    "scenario": "expired",
+    "variant": "expired-coupon",
+    "expectedVerdict": "product_failure",
+    "split": "development"
+  },
+  {
+    "id": "quantity-correct",
+    "scenario": "quantity",
+    "variant": "correct",
+    "expectedVerdict": "passed",
+    "split": "development"
+  },
+  {
+    "id": "quantity-defect",
+    "scenario": "quantity",
+    "variant": "stale-quantity",
+    "expectedVerdict": "product_failure",
+    "split": "development"
+  },
+  {
+    "id": "removal-correct",
+    "scenario": "removal",
+    "variant": "correct",
+    "expectedVerdict": "passed",
+    "split": "development"
+  },
+  {
+    "id": "removal-defect",
+    "scenario": "removal",
+    "variant": "sticky-discount",
+    "expectedVerdict": "product_failure",
+    "split": "development"
+  },
+  {
+    "id": "checkout-correct",
+    "scenario": "checkout",
+    "variant": "correct",
+    "expectedVerdict": "passed",
+    "split": "development"
+  },
+  {
+    "id": "checkout-defect",
+    "scenario": "checkout",
+    "variant": "missing-required",
+    "expectedVerdict": "product_failure",
+    "split": "development"
+  },
+  {
+    "id": "missing-requirement",
+    "scenario": "expired",
+    "variant": "correct",
+    "expectedOverride": "",
+    "expectedVerdict": "inconclusive",
+    "split": "development"
+  },
+  {
+    "id": "blocked-redirect",
+    "scenario": "expired",
+    "variant": "correct",
+    "path": "/outbound",
+    "expectedVerdict": "agent_failure",
+    "split": "development"
+  },
+  {
+    "id": "login-correct",
+    "scenario": "login",
+    "variant": "correct",
+    "expectedVerdict": "passed",
+    "split": "development"
+  },
+  {
+    "id": "alternate-coupon",
+    "scenario": "expired",
+    "variant": "expired-coupon",
+    "wording": "alternate",
+    "expectedVerdict": "product_failure",
+    "split": "held-out"
+  },
+  {
+    "id": "alternate-quantity",
+    "scenario": "quantity",
+    "variant": "correct",
+    "wording": "alternate",
+    "expectedVerdict": "passed",
+    "split": "held-out"
+  }
+]
