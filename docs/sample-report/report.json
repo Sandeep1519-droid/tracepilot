@@ -1,0 +1,2007 @@
+{
+  "id": "99f7612a-37c4-455d-9e59-f3c9983fecd8",
+  "createdAt": "2026-10-29T06:16:36.128Z",
+  "lifecycle": "completed",
+  "input": {
+    "targetUrl": "http://127.0.0.1:4311",
+    "goal": "Verify that an expired coupon is rejected and the cart total stays unchanged.",
+    "expected": "Show “This coupon has expired.” and keep the total unchanged.",
+    "fixture": "Expired coupon: EXPIRED20. Cart: one Everyday Backpack, $64.00 plus $8.00 shipping.",
+    "scenario": "expired",
+    "variant": "expired-coupon",
+    "wording": "standard",
+    "mode": "scripted",
+    "maxSteps": 45,
+    "maxDuration": 120
+  },
+  "plan": [
+    "Open the cart and record its total",
+    "Apply the known expired coupon",
+    "Verify rejection and an unchanged total"
+  ],
+  "cancelRequested": false,
+  "events": [
+    {
+      "id": "01d1f190-9c87-418b-8861-79ffff62060f",
+      "at": "2026-10-29T06:16:37.584Z",
+      "attempt": 1,
+      "action": {
+        "type": "navigate",
+        "url": "http://127.0.0.1:4311"
+      },
+      "target": "navigate",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 187,
+      "observation": {
+        "id": 1,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": false
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": false
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": false
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nTHE EVERYDAY COLLECTION\nGood things. Built to go.\n\nConsidered essentials for wherever the day takes you.\n\n🎒\nBESTSELLER\nEveryday Backpack\n\nWater-resistant canvas. A place for everything.\nMade for the long way home.\n\n$64.00\nView details View in cart\n\nOne backpack is already in your test cart.\n\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "button",
+            "role": "button",
+            "name": "View details",
+            "testId": "product-details",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "product-details"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "button",
+            "role": "button",
+            "name": "View in cart",
+            "testId": "add-to-cart",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "add-to-cart"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-01d1f190-9c87-418b-8861-79ffff62060f.png",
+      "checks": [],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "64f69df7-edaa-4f03-90e9-ccce0bbb2a3d",
+      "at": "2026-10-29T06:16:37.697Z",
+      "attempt": 1,
+      "action": {
+        "type": "click_element",
+        "elementId": "e2",
+        "observationId": 1
+      },
+      "target": "Cart 1",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 112,
+      "observation": {
+        "id": 2,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-64f69df7-edaa-4f03-90e9-ccce0bbb2a3d.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "cart-link"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "fed38143-993d-4b8d-be32-64270a672834",
+      "at": "2026-10-29T06:16:37.730Z",
+      "attempt": 1,
+      "action": {
+        "type": "check_condition",
+        "checkId": "initial-total"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion passed",
+      "durationMs": 32,
+      "observation": {
+        "id": 3,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-fed38143-993d-4b8d-be32-64270a672834.png",
+      "checks": [
+        {
+          "id": "initial-total",
+          "testId": "cart-total",
+          "operator": "baseline",
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": 7200,
+          "passed": true,
+          "eventId": "fed38143-993d-4b8d-be32-64270a672834"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "e7543a8e-add7-4549-92f9-c8313cb58876",
+      "at": "2026-10-29T06:16:37.766Z",
+      "attempt": 1,
+      "action": {
+        "type": "fill_field",
+        "elementId": "e4",
+        "observationId": 3,
+        "value": "EXPIRED20"
+      },
+      "target": "Coupon code",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 35,
+      "observation": {
+        "id": 4,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-e7543a8e-add7-4549-92f9-c8313cb58876.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "coupon-input"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "b3052ec9-7dae-420f-9d24-5cec8574fa45",
+      "at": "2026-10-29T06:16:37.833Z",
+      "attempt": 1,
+      "action": {
+        "type": "click_element",
+        "elementId": "e5",
+        "observationId": 4
+      },
+      "target": "Apply",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 66,
+      "observation": {
+        "id": 5,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-b3052ec9-7dae-420f-9d24-5cec8574fa45.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "apply-coupon"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "e6a14b6b-5b82-4647-a435-feb762f0a175",
+      "at": "2026-10-29T06:16:37.863Z",
+      "attempt": 1,
+      "action": {
+        "type": "check_condition",
+        "checkId": "coupon-rejected"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion passed",
+      "durationMs": 27,
+      "observation": {
+        "id": 6,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-e6a14b6b-5b82-4647-a435-feb762f0a175.png",
+      "checks": [
+        {
+          "id": "coupon-rejected",
+          "testId": "coupon-message",
+          "operator": "contains",
+          "expected": "This coupon has expired.",
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": "This coupon has expired.",
+          "passed": true,
+          "eventId": "e6a14b6b-5b82-4647-a435-feb762f0a175"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "63a8c417-0ace-40ec-90e3-5948c64b1be6",
+      "at": "2026-10-29T06:16:37.897Z",
+      "attempt": 1,
+      "action": {
+        "type": "check_condition",
+        "checkId": "total-unchanged"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion failed",
+      "durationMs": 33,
+      "observation": {
+        "id": 7,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-1-63a8c417-0ace-40ec-90e3-5948c64b1be6.png",
+      "checks": [
+        {
+          "id": "total-unchanged",
+          "testId": "cart-total",
+          "operator": "unchanged",
+          "expected": 7200,
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": 5920,
+          "passed": false,
+          "eventId": "63a8c417-0ace-40ec-90e3-5948c64b1be6"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "b750845a-31f6-4e5d-bd86-597e2f4bf24f",
+      "at": "2026-10-29T06:16:38.110Z",
+      "attempt": 2,
+      "action": {
+        "type": "navigate",
+        "url": "http://127.0.0.1:4311"
+      },
+      "target": "navigate",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 57,
+      "observation": {
+        "id": 1,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": false
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": false
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": false
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nTHE EVERYDAY COLLECTION\nGood things. Built to go.\n\nConsidered essentials for wherever the day takes you.\n\n🎒\nBESTSELLER\nEveryday Backpack\n\nWater-resistant canvas. A place for everything.\nMade for the long way home.\n\n$64.00\nView details View in cart\n\nOne backpack is already in your test cart.\n\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "button",
+            "role": "button",
+            "name": "View details",
+            "testId": "product-details",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "product-details"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "button",
+            "role": "button",
+            "name": "View in cart",
+            "testId": "add-to-cart",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "add-to-cart"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-b750845a-31f6-4e5d-bd86-597e2f4bf24f.png",
+      "checks": [],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "b00821b5-be6f-4bb9-bd2a-3676772fb6c9",
+      "at": "2026-10-29T06:16:38.199Z",
+      "attempt": 2,
+      "action": {
+        "type": "click_element",
+        "elementId": "e2",
+        "observationId": 1
+      },
+      "target": "Cart 1",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 88,
+      "observation": {
+        "id": 2,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-b00821b5-be6f-4bb9-bd2a-3676772fb6c9.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "cart-link"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "02b8596b-11d3-4180-97b8-62f3ae46a550",
+      "at": "2026-10-29T06:16:38.225Z",
+      "attempt": 2,
+      "action": {
+        "type": "check_condition",
+        "checkId": "initial-total"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion passed",
+      "durationMs": 24,
+      "observation": {
+        "id": 3,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-02b8596b-11d3-4180-97b8-62f3ae46a550.png",
+      "checks": [
+        {
+          "id": "initial-total",
+          "testId": "cart-total",
+          "operator": "baseline",
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": 7200,
+          "passed": true,
+          "eventId": "02b8596b-11d3-4180-97b8-62f3ae46a550"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "65629d75-d2b1-432e-a2c7-d5db085d6af8",
+      "at": "2026-10-29T06:16:38.259Z",
+      "attempt": 2,
+      "action": {
+        "type": "fill_field",
+        "elementId": "e4",
+        "observationId": 3,
+        "value": "EXPIRED20"
+      },
+      "target": "Coupon code",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 30,
+      "observation": {
+        "id": 4,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$0.00\nTotal\n$72.00\nCoupon code\nApply\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-65629d75-d2b1-432e-a2c7-d5db085d6af8.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "coupon-input"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "8ce3b884-f79d-4026-95c1-d7d22bde2003",
+      "at": "2026-10-29T06:16:38.327Z",
+      "attempt": 2,
+      "action": {
+        "type": "click_element",
+        "elementId": "e5",
+        "observationId": 4
+      },
+      "target": "Apply",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Completed",
+      "durationMs": 66,
+      "observation": {
+        "id": 5,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-8ce3b884-f79d-4026-95c1-d7d22bde2003.png",
+      "checks": [],
+      "locator": {
+        "kind": "testId",
+        "value": "apply-coupon"
+      },
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "0a1d599e-38a9-4b7d-8cbf-aca299a1cca3",
+      "at": "2026-10-29T06:16:38.358Z",
+      "attempt": 2,
+      "action": {
+        "type": "check_condition",
+        "checkId": "coupon-rejected"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion passed",
+      "durationMs": 29,
+      "observation": {
+        "id": 6,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-0a1d599e-38a9-4b7d-8cbf-aca299a1cca3.png",
+      "checks": [
+        {
+          "id": "coupon-rejected",
+          "testId": "coupon-message",
+          "operator": "contains",
+          "expected": "This coupon has expired.",
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": "This coupon has expired.",
+          "passed": true,
+          "eventId": "0a1d599e-38a9-4b7d-8cbf-aca299a1cca3"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    },
+    {
+      "id": "856e2ee1-06cc-4f7a-9262-30bd01588c82",
+      "at": "2026-10-29T06:16:38.392Z",
+      "attempt": 2,
+      "action": {
+        "type": "check_condition",
+        "checkId": "total-unchanged"
+      },
+      "target": "check_condition",
+      "url": "http://127.0.0.1:4311/",
+      "result": "Assertion failed",
+      "durationMs": 33,
+      "observation": {
+        "id": 7,
+        "url": "http://127.0.0.1:4311/",
+        "checkTargets": [
+          {
+            "checkId": "initial-total",
+            "visible": true
+          },
+          {
+            "checkId": "coupon-rejected",
+            "visible": true
+          },
+          {
+            "checkId": "total-unchanged",
+            "visible": true
+          }
+        ],
+        "title": "Fieldwork Supply",
+        "text": "fieldwork.\nShop\nSign in\nCart 1\nA LITTLE LESS, BUT BETTER\nYour cart\n🎒\nEveryday Backpack\n\nOlive / One size\n\n$64.00 each\nQuantity\n\nSecure checkout · Free returns within 30 days\n\nOrder summary\nSubtotal\n$64.00\nShipping\n$8.00\nDiscount\n−$12.80\nTotal\n$59.20\nCoupon code\nApply\nThis coupon has expired.\nContinue to checkout →\nFIELDWORK SUPPLY · Thoughtfully made for the everyday.   Local test store · No real payments.",
+        "elements": [
+          {
+            "id": "e0",
+            "tag": "button",
+            "role": "button",
+            "name": "Shop",
+            "testId": "shop-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "shop-link"
+            }
+          },
+          {
+            "id": "e1",
+            "tag": "button",
+            "role": "button",
+            "name": "Sign in",
+            "testId": "login-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "login-link"
+            }
+          },
+          {
+            "id": "e2",
+            "tag": "button",
+            "role": "button",
+            "name": "Cart 1",
+            "testId": "cart-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "cart-link"
+            }
+          },
+          {
+            "id": "e3",
+            "tag": "input",
+            "role": "spinbutton",
+            "name": "Quantity",
+            "testId": "quantity",
+            "type": "number",
+            "value": "1",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "quantity"
+            }
+          },
+          {
+            "id": "e4",
+            "tag": "input",
+            "role": "textbox",
+            "name": "Coupon code",
+            "testId": "coupon-input",
+            "type": "text",
+            "value": "EXPIRED20",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "coupon-input"
+            }
+          },
+          {
+            "id": "e5",
+            "tag": "button",
+            "role": "button",
+            "name": "Apply",
+            "testId": "apply-coupon",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "apply-coupon"
+            }
+          },
+          {
+            "id": "e6",
+            "tag": "button",
+            "role": "button",
+            "name": "Continue to checkout →",
+            "testId": "checkout-link",
+            "type": "submit",
+            "value": "",
+            "disabled": false,
+            "locator": {
+              "kind": "testId",
+              "value": "checkout-link"
+            }
+          }
+        ],
+        "documentStatus": 200
+      },
+      "screenshot": "attempt-2-856e2ee1-06cc-4f7a-9262-30bd01588c82.png",
+      "checks": [
+        {
+          "id": "total-unchanged",
+          "testId": "cart-total",
+          "operator": "unchanged",
+          "expected": 7200,
+          "requirement": "Show “This coupon has expired.” and keep the total unchanged.",
+          "actual": 5920,
+          "passed": false,
+          "eventId": "856e2ee1-06cc-4f7a-9262-30bd01588c82"
+        }
+      ],
+      "error": false,
+      "execution": "succeeded"
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-10-29T06:16:36.392Z",
+  "interruptRequested": false,
+  "currentAction": "Validating the exported regression against correct and broken fixtures",
+  "verdict": "product_failure",
+  "explanation": "Recorded browser evidence contradicts the original expected behavior. The failure reproduced in a clean browser session.",
+  "reproduction": "confirmed",
+  "exportStatus": "verified",
+  "exportExplanation": "This exact exported file passed on the correct fixture and failed an original assertion on the broken fixture.",
+  "finishedAt": "2026-10-29T06:16:41.613Z"
+}
